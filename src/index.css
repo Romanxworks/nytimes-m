@@ -20,7 +20,7 @@
 body {
   margin: 0;
   padding-top: var(--header-height);
-  padding-bottom: var(--footer-height);
+  /* padding-bottom: var(--footer-height); */
   position: relative;
 }
 .hidden {

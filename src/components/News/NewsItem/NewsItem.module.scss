@@ -1,0 +1,43 @@
+.news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid #EDEDED;
+  padding-bottom: 16px;
+
+  .img {
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+  .title {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    color: #096FFA;
+    
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0;
+
+  }
+  .description {
+    grid-column: 2/-1;
+    grid-row: 2/3;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0;
+
+  }
+  .date {
+    margin-top: 8px;
+    grid-column: 2/-1;
+    grid-row: 3/4;
+    color: #6D787A;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0;
+  }
+}

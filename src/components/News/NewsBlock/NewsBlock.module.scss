@@ -1,0 +1,18 @@
+.newsBlock {
+  text-align: left;
+
+  &:not(:first-child) {
+    margin-top: 32px;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .newsList {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+}
