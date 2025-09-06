@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import classes from "./Header.module.scss"
-import NavigateMenu from "./Navigate/NavigateMenu"
+import NavigateMenu from "./NavigateMenu/NavigateMenu"
 import { useState } from "react"
 
 export default function Header() {

@@ -1,15 +1,11 @@
 import clsx from "clsx"
 import classes from "./NavigateMenu.module.scss"
 import { Link } from "react-router-dom"
+import type { TNavItem } from "../../types"
 
 interface NavigateMenuProps {
   isOpen: boolean
   openHandler: () => void
-}
-
-type TNavItem = {
-  title: string
-  link: string
 }
 
 const navItems: TNavItem[] = [
