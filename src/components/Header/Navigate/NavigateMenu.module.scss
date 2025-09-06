@@ -1,0 +1,46 @@
+.mainNav {
+  position: fixed;
+  top: 0;
+  left: -110vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  opacity: 0;
+  transition: all 0.3s;
+
+  &_hide {
+    left: 0;
+    opacity: 1;
+    transition: all 0.3s;
+  }
+
+  .navHeader { 
+    height: var(--header-heigth);
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    .menuToggle {
+      padding: 15px 20px;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+
+  .navBody {
+    margin-top: 80px;
+    width: 100%;
+
+    .menuItem {
+      display: block;
+      padding: 14px 20px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 100%;
+      letter-spacing: 0.01em;
+    }
+  }
+
+}
