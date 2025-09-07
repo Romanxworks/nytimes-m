@@ -1,17 +1,24 @@
+import dayjs from "dayjs"
+import type { NewsBlockItems } from "../News"
 import NewsItem from "../NewsItem/NewsItem"
 import classes from "./NewsBlock.module.scss"
 
-export default function NewsBlock() {
+interface NewsBlockProps {
+  newsBlok: NewsBlockItems
+}
+
+export default function NewsBlock({ newsBlok }: NewsBlockProps) {
+  const dayTitle = `${newsBlok.dayNum}.${dayjs(newsBlok.items[1].pub_date).format("MM.YYYY")}`
+
   return (
     <li className={classes.newsBlock}>
-      <h3 className={classes.title}>News for 16.06.2023</h3>
+      <h3 className={classes.title}>News for {dayTitle} </h3>
       <ul className={classes.newsList}>
-        <li>
-          <NewsItem />
-        </li>
-        <li>
-          <NewsItem />
-        </li>
+        {newsBlok.items.map((item) => (
+          <li key={item._id}>
+            <NewsItem news={item} />
+          </li>
+        ))}
       </ul>
     </li>
   )
