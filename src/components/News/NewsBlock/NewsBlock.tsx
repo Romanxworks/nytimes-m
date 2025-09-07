@@ -14,8 +14,8 @@ export default function NewsBlock({ newsBlok }: NewsBlockProps) {
     <li className={classes.newsBlock}>
       <h3 className={classes.title}>News for {dayTitle} </h3>
       <ul className={classes.newsList}>
-        {newsBlok.items.map((item) => (
-          <li key={item._id}>
+        {newsBlok.items.map((item, ind) => (
+          <li key={item._id + ind}>
             <NewsItem news={item} />
           </li>
         ))}
